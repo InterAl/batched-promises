@@ -1,0 +1,24 @@
+{
+  "name": "batched-promises",
+  "version": "1.0.0",
+  "description": "Execute promises parallely with a concurrency limitExecute promises parallely with a concurrency limit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InterAl/batched-promises.git"
+  },
+  "keywords": [
+    "promises",
+    "batch",
+    "concurrency"
+  ],
+  "author": "interal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/InterAl/batched-promises/issues"
+  },
+  "homepage": "https://github.com/InterAl/batched-promises#readme"
+}
