@@ -1,7 +1,7 @@
 {
   "name": "batched-promises",
   "version": "1.0.1",
-  "description": "Execute promises parallely with a concurrency limitExecute promises parallely with a concurrency limit",
+  "description": "Execute promises parallelly with a concurrency limit",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
