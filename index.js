@@ -13,7 +13,6 @@ module.exports = function batchPromises(promiseFns, {concurrencyLimit}) {
             if (executing < concurrencyLimit && queue.length > 0) {
                 const batch = queue.splice(0, concurrencyLimit - executing);
                 executing += batch.length;
-                console.log('batch', batch.length, 'executing', executing, 'remaining', queue.length);
 
                 batch.forEach(promiseFn => {
                     promiseFn()
