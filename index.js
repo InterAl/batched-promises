@@ -17,12 +17,12 @@ module.exports = function batchPromises(promiseFns, {concurrencyLimit}) {
                 batch.forEach(promiseFn => {
                     promiseFn()
                         .then(r => {
-                            setTimeout(recur, 50);
+                            setTimeout(recur, 0);
                             executing--;
                             return r;
                         })
                         .catch(r => {
-                            setTimeout(recur, 50);
+                            setTimeout(recur, 0);
                             executing--;
                             return Promise.reject(r);
                         });
