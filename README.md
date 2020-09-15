@@ -11,11 +11,11 @@ $ npm i batched-promises
 const batchPromises = require('batched-promises');
 
 const fns = [
-    () => new Promise(r => resolve()),
-    () => new Promise(r => resolve()),
-    () => new Promise(r => resolve()),
-    () => new Promise(r => resolve()),
-    () => new Promise(r => resolve()),
+    () => new Promise(resolve => resolve()),
+    () => new Promise(resolve => resolve()),
+    () => new Promise(resolve => resolve()),
+    () => new Promise(resolve => resolve()),
+    () => new Promise(resolve => resolve()),
 ];
 
 batchPromises(fns, {concurrencyLimit: 3})
