@@ -1,6 +1,6 @@
 {
   "name": "batched-promises",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Execute promises parallelly with a concurrency limit",
   "main": "index.js",
   "scripts": {
