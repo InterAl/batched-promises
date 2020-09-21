@@ -1,4 +1,4 @@
-module.exports = function batchPromises(promiseFns, {concurrencyLimit}) {
+module.exports = function batchPromises(promiseFns, options) {
     return new Promise((resolve) => {
         if (!promiseFns)
             throw Error('no promiseFns');
@@ -10,8 +10,8 @@ module.exports = function batchPromises(promiseFns, {concurrencyLimit}) {
             if (queue.length === 0 && executing === 0)
                 resolve();
 
-            if (executing < concurrencyLimit && queue.length > 0) {
-                const batch = queue.splice(0, concurrencyLimit - executing);
+            if (executing < options.concurrencyLimit && queue.length > 0) {
+                const batch = queue.splice(0, options.concurrencyLimit - executing);
                 executing += batch.length;
 
                 batch.forEach(promiseFn => {
